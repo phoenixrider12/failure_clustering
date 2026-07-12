@@ -1,0 +1,30 @@
+# Core pipeline (Stages 1-3, monitoring)
+google-generativeai>=0.8.4      # Gemini VLM (Stage 1 failure reasoning)
+openai>=1.30.0                  # o4-mini / gpt-* (Stages 2-3, monitoring, LLM-judge)
+pydantic>=2.6                   # structured LLM outputs
+python-dotenv>=1.0             # optional: load API keys from a .env file
+numpy>=1.24
+pillow>=10.0
+opencv-python>=4.9             # video / frame reading
+tqdm>=4.66
+
+# Semantic observation downsampling (Stage 1, manipulation)
+torch>=2.2
+transformers>=4.40             # CLIP for frame selection
+scikit-learn>=1.4              # metrics + (optional) KMeans in frame selection
+scipy>=1.11                    # Hungarian matching for taxonomy alignment
+
+# Evaluation
+sentence-transformers>=2.7     # SBERT cosine similarity + assignment baseline
+rouge-score>=0.1.2             # ROUGE-1/2/L
+nltk>=3.8                      # METEOR
+pandas>=2.0                    # assignment-metrics CSVs
+
+# Baselines / figures
+bertopic>=0.16                 # BERTopic clustering baseline
+matplotlib>=3.8
+seaborn>=0.13
+
+# Optional extras (uncomment if used)
+# anthropic>=0.25              # Claude-based LLM-judge variant
+# together>=1.3                # Llama / DeepSeek clustering baselines

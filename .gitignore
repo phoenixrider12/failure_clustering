@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Datasets are NOT tracked -- download them (see README) into a local path and
+# point the scripts at it with --input/--dataset flags.
+datasets/
+data/
+*.mp4
+*.zarr/
+
+# Pipeline outputs (regenerate with the scripts)
+results/**/*.jsonl
+results/**/*.txt
+results/**/*.csv
+results/**/*.pkl
+
+# Model weights / caches
+*.pth
+*.pt
+*.safetensors
+embeddings_cache/
+bleurt-base-128/
+
+# Figures (regenerate with figures/plot_results.py)
+*.png
+*.pdf
+!docs/**/*.png
+
+# Secrets -- never commit API keys
+.env
+
+# OS
+.DS_Store
